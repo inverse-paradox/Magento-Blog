@@ -12,7 +12,7 @@
 <?php else: ?>
     <div class="blogfeed-posts">
         <?php $_iterator = 0; ?>
-        <ol class="post-list" id="post-list">
+        <ul class="post-list" id="post-list">
             <?php foreach ($_postCollection as $_post): ?>
                 <li class="post<?php if( ++$_iterator == sizeof($_postCollection) ): ?> last<?php endif; ?>">
                     <?php $_postNameStripped = $this->stripTags($_post->getTitle(), null, true); ?>
@@ -35,7 +35,7 @@
                     </div>
                 </li>
             <?php endforeach; ?>
-        </ol>
+        </ul>
         <script type="text/javascript">decorateList('post-list', 'none-recursive')</script>
     </div>
 <?php endif; ?>
